@@ -19,7 +19,7 @@ Calculator:
       updatedAt:
         type: string
       meta_data:
-        $ref: "#/definitions/Calculator_meta_data"
+        $ref: "#/Calculator_meta_data"
   CalculatorErrorResponse:
     required:
     - response
@@ -27,7 +27,7 @@ Calculator:
       response:
         type: object
         items:
-          $ref: "#/definitions/CalculatorErrorResponse_response"
+          $ref: "#/CalculatorErrorResponse_response"
   Calculator_meta_data:
     properties:
       title:
