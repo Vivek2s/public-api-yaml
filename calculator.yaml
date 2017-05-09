@@ -1,0 +1,52 @@
+Calculator:
+    required:
+    - createdAt
+    - id
+    - name
+    - state
+    - type
+    properties:
+      id:
+        type: string
+      type:
+        type: string
+      state:
+        type: string
+      name:
+        type: string
+      createdAt:
+        type: string
+      updatedAt:
+        type: string
+      meta_data:
+        $ref: "#/definitions/Calculator_meta_data"
+  CalculatorErrorResponse:
+    required:
+    - response
+    properties:
+      response:
+        type: object
+        items:
+          $ref: "#/definitions/CalculatorErrorResponse_response"
+  Calculator_meta_data:
+    properties:
+      title:
+        type: string
+      favicon:
+        type: string
+      ga_tracking_id:
+        type: string
+      url:
+        type: string
+      description:
+        type: string
+  CalculatorErrorResponse_response:
+    required:
+    - message
+    properties:
+      code:
+        type: integer
+      message:
+        type: string
+      description:
+        type: string
